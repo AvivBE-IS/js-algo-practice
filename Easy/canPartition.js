@@ -13,8 +13,24 @@ The array may contain duplicates.
 Multiple solutions can exist, any solution is sufficient to return true.
 */
 
-function canPartition( /*args*/ ) {
+function canPartition(nums) {
   //your code
+  let j = 0;
+  let i = 0;
+  let mul = 1;
+  for (i = 0; i < nums.length; i++) {
+    for (j = 0; j < nums.length; j++) {
+      if (j === i) continue;
+      mul *= nums[j];
+      if (mul === nums[i]) return true;
+    }
+    mul = 0;
+  }
+  return false;
 }
-
+console.log(canPartition([-1, -20, 5, -1, -2, 2]));
 exports.solution = canPartition;
+
+//${[-1,-20,5,-1,-2,2]} |${true}
+//${[2,8,4,1]} |${true}
+//${[1,1,-1,1]} |${false}
