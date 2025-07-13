@@ -21,10 +21,12 @@ function canPartition(nums) {
   for (i = 0; i < nums.length; i++) {
     for (j = 0; j < nums.length; j++) {
       if (j === i) continue;
+
       mul *= nums[j];
-      if (mul === nums[i]) return true;
+      
     }
-    mul = 0;
+    if (mul === nums[i]) return true;
+    mul = 1;
   }
   return false;
 }
