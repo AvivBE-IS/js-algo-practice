@@ -16,3 +16,5 @@ npm run test-arrayOfMultiples
 #Happy coding!
 
 npx jest Easy/<scriptname>.test.js
+
+npm run test-encrypt

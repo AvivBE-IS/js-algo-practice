@@ -1,10 +1,10 @@
 {
   "name": "test",
   "version": "1.0.0",
-  "description": "Hi! This repo is made for you to practice your coding interview skills. For some challenges you will need to research new methods.",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --testPathPatterns=/",
+    "test": "jest --testPathPattern=/",
     "test-arrayOfMultiples": "jest --testPathPattern=Easy/arrayOfMultiples.test.js",
     "test-calculator": "jest --testPathPattern=Easy/calculator.test.js",
     "test-canPartition": "jest --testPathPattern=Easy/canPartition.test.js",
@@ -61,19 +61,8 @@
   "license": "ISC",
   "dependencies": {
     "@babel/preset-env": "^7.11.0",
-    "babel-jest": "^30.0.4",
+    "babel-jest": "^26.2.2",
+    "jest": "^26.2.2",
     "js-beautify": "^1.13.0"
-  },
-  "devDependencies": {
-    "jest": "^30.0.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AvivBE-IS/js-algo-practice.git"
-  },
-  "keywords": [],
-  "bugs": {
-    "url": "https://github.com/AvivBE-IS/js-algo-practice/issues"
-  },
-  "homepage": "https://github.com/AvivBE-IS/js-algo-practice#readme"
+  }
 }

@@ -15,8 +15,20 @@ Notes
 The digits can be discovered in any order.
 */
 
-function findAllDigits( /*args*/ ) {
+function findAllDigits(arr) {
   //your code
+  let cntArr = Array(10).fill(0);
+
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 1; j <= 1000; j *= 10) {
+      cntArr[arr[i] % 10]++;
+      arr[i] = Math.floor(arr[i] / 10);
+    }
+  }
+  for (let cnt of cntArr) {
+    if (cnt === 0) return false;
+  }
+  return true;
 }
 
 exports.solution = findAllDigits;
